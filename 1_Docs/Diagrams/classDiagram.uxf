@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>120</x>
+      <y>120</y>
+      <w>210</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>User
+Package::BillSplit
+--
+user_id: String
+name: String
+email: String
+MobileNumber: String
+ImageUri: String
+--
++AddTransaction()
++AddNewUser()
++CreateGroup()
++DeleteTransaction()
++EditProfile()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>530</x>
+      <y>130</y>
+      <w>210</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Group
+Package::BillSplit
+--
+grpkey: String
+grpname: String
+userlist: List&lt;User&gt;
+--
++AddUser()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>180</y>
+      <w>230</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=n
+m2=n
+have </panel_attributes>
+    <additional_attributes>10.0;20.0;210.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>480</x>
+      <y>340</y>
+      <w>210</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Transaction
+Package::BillSplit
+--
+tran_id: String
+id: String
+description: String
+date: String
+total: Float
+grpkey: String
+grpname: String
+UserList: Map&lt;String,UserUID&gt;
+--
++CreateTransaction()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>290</y>
+      <w>180</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=n
+do
+
+</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>760</x>
+      <y>340</y>
+      <w>210</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>UserUID
+Package::BillSplit
+--
+user_id: String
+name: String
+ImageUri: String
+amount: float</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>680</x>
+      <y>400</y>
+      <w>100</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=n
+m2=n
+uses
+
+</panel_attributes>
+    <additional_attributes>10.0;20.0;80.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>90</x>
+      <y>20</y>
+      <w>910</w>
+      <h>560</h>
+    </coordinates>
+    <panel_attributes>BillSplit</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
